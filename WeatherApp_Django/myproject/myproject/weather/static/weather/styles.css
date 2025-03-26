@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #87CEEB; /* Default sunny sky color */
+    animation: weatherAnimation 15s infinite;
+}
+
+/* Keyframes for weather background animation */
+@keyframes weatherAnimation {
+    0% {
+        background: linear-gradient(180deg, #87CEEB 0%, #ffffff 100%); /* Sunny sky */
+    }
+    25% {
+        background: linear-gradient(180deg, #D3D3D3 0%, #B0C4DE 100%); /* Cloudy sky */
+    }
+    50% {
+        background: linear-gradient(180deg, #1E1E1E 0%, #4D4D4D 100%); /* Rainy sky */
+        background-size: 100% 200%;
+        animation: rain 1s infinite linear; /* Rain animation */
+    }
+    75% {
+        background: linear-gradient(180deg, #A9A9A9 0%, #B0B0B0 100%); /* Snowy sky */
+        background-size: 100% 200%;
+        animation: snow 1s infinite linear; /* Snow animation */
+    }
+    100% {
+        background: linear-gradient(180deg, #87CEEB 0%, #ffffff 100%); /* Back to sunny */
+    }
+}
+
+/* Animation for rain (moving raindrops effect) */
+@keyframes rain {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+/* Animation for snow (moving snowflakes effect) */
+@keyframes snow {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+/* Weather Container Styling */
+.weather-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Styling for the title */
+h1 {
+    color: #007bff;
+    font-size: 30px;
+}
+
+/* Style for the weather info */
+.weather-info p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+#coordinates {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+/* Weather Icon */
+#weather-icon {
+    color: #ffcc00; /* Sun color for the icon */
+}
+
+/* Buttons (Download and Clear Cache) */
+#downloadFile, #clearCache {
+    margin-top: 10px;
+    width: 100%;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 30px;
+}
+
+#city {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Style for weather icon */
+#weather-icon {
+    color: #ffcc00;
+}
+
+/* Weather Info */
+.weather-info p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+#coordinates {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.weather-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.weather-info {
+    margin-top: 20px;
+    display: none;
+}
+
+.weather-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#error-message {
+    color: red;
+    display: none;
+}
+
+/* Custom styles for buttons */
+#downloadFile {
+    background-color: #007bff;
+    color: white;
+    margin-bottom: 8px;
+}
+
+#downloadFile:hover {
+    background-color: #0056b3;
+}
+
+#clearCache {
+    background-color: #dc3545;
+    color: white;
+}
+
+#clearCache:hover {
+    background-color: #c82333;
+}
