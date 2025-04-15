@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 5px;
+    background-color: #f0f2f5;
+}
+
+h1 {
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 blocks per row */
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.block {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.block h2 {
+    margin-top: 0;
+}
+
+.block p {
+    margin-bottom: 0;
+}
+
+.forms-body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.form-footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}

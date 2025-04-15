@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Page</title>
+</head>
+<body>
+    <!--<h3>The the number of words is {{count}}</h3> -->
+    <!-- This can be used when you are creating a blog
+     and fetching imgages, etc.., on the database. -->
+    {% for post in posts %}
+    <h1><a href="{% url 'post' post %}">Post</a></h1>
+    {% endfor %}
+</body>
+</html>

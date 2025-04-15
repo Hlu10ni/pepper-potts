@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+    <title>Document</title>
+</head>
+<body>
+    <!--<h1>Input Your Text Below:</h1>
+    <form method="POST" action="{% url 'counter' %}">
+        {% csrf_token %}
+        <textarea name="text" rows="25" cols="100"></textarea><br>
+        <input type="submit" value="Submit"/>
+    </form> 
+    -->  
+
+    {% if user.is_authenticated %}
+    <h2>Welcome, {{user.username }}</h2>
+    {% else %}
+    <h2>Welcome, scammer</h2>
+    {% endif %}
+
+    {%if user.is_authenticated %}
+    <button type="button" onclick="window.location.href='login'">Log Out</button>
+    {% else %}
+    <h2>Login or Sign Up</h2>
+    {% endif %}
+    <div class="blocks">
+        {% for feature in features%}
+        <div class="block">
+            <h2>{{feature.name}}</h2>
+            <p>{{feature.details}}</p>
+            {% if feature.name == "Quick"%}
+            <p>This feature says our site is quick</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
